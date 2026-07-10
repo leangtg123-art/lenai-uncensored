@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Lenai Uncensored</title>
+    <meta name="description" content="Lenai Uncensored - Advanced AI Chatbot">
+    <link rel="stylesheet" href="style.css">
+    <!-- Inter Font like Claude -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <!-- Marked for Markdown Parsing -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js" defer></script>
+    <script src="app.js" defer></script>
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <button class="new-chat-btn" id="new-chat-btn">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                    New Chat
+                </button>
+                <button class="toggle-sidebar" id="close-sidebar-btn" aria-label="Close Sidebar">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"></path><path d="M12 19l-7-7 7-7"></path></svg>
+                </button>
+            </div>
+            
+            <div class="chat-history">
+                <div class="history-label">Today</div>
+                <div class="history-list" id="history-list">
+                    <!-- History items will be populated here -->
+                </div>
+            </div>
+
+            <div class="sidebar-footer">
+                <div class="user-profile">
+                    <div class="avatar-sm">U</div>
+                    <div class="user-info">
+                        <span class="user-name">Local User</span>
+                        <span class="user-plan">Uncensored Mode</span>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Chat Area -->
+        <main class="main-content">
+            <header class="top-nav">
+                <button class="toggle-sidebar mobile-menu-btn" id="open-sidebar-btn">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+                </button>
+                <div class="model-selector">
+                    <span class="model-name">Lenai 3.5 Sonnet (Uncensored)</span>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </div>
+            </header>
+
+            <div class="chat-container" id="chat-container">
+                <!-- Initial Welcome Screen -->
+                <div class="welcome-screen" id="welcome-screen">
+                    <div class="welcome-logo">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 1 0 10 10H12V2z"></path><path d="M12 12 2.1 7.1"></path><path d="M12 12l9.9 4.9"></path></svg>
+                    </div>
+                    <h1>Good afternoon</h1>
+                    <p>How can Lenai help you today?</p>
+                </div>
+            </div>
+
+            <div class="input-container">
+                <div class="input-box">
+                    <textarea id="chat-input" placeholder="Message Lenai..." rows="1" autofocus></textarea>
+                    <button class="send-btn" id="send-btn" disabled>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+                    </button>
+                </div>
+                <div class="footer-text">
+                    Lenai Uncensored can make mistakes. Everything generated is free from ethical filters.
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
