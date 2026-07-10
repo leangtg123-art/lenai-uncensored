@@ -7,7 +7,7 @@
     --text-primary: #f0f0f0;
     --text-secondary: #888888;
     --border-color: #222222;
-    --accent-color: #7c3aed; /* Neon violet for the 'uncensored' premium feel */
+    --accent-color: #7c3aed;
     --accent-hover: #8b5cf6;
     --code-bg: #090909;
     --danger: #ef4444;
@@ -102,8 +102,11 @@ body { background-color: var(--bg-main); color: var(--text-primary); overflow: h
     border: none; padding: 8px 12px; border-radius: 8px; cursor: pointer; font-size: 14px; font-weight: 500;
 }
 .new-chat-btn:hover { background: var(--bg-sidebar-hover); }
+
+/* Ensuring SVG clicks pass through to the button */
 .toggle-sidebar { background: transparent; color: var(--text-secondary); border: none; cursor: pointer; padding: 12px; border-radius: 8px; }
 .toggle-sidebar:hover { color: var(--text-primary); background: var(--bg-sidebar-hover); }
+.toggle-sidebar svg { pointer-events: none; }
 
 .chat-history { flex: 1; overflow-y: auto; padding: 0 16px; }
 .history-label { font-size: 11px; color: var(--text-secondary); margin: 16px 0 8px 8px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px;}
@@ -140,7 +143,7 @@ body { background-color: var(--bg-main); color: var(--text-primary); overflow: h
 .top-nav {
     display: flex; align-items: center; justify-content: space-between; padding: 12px 24px;
     flex-shrink: 0; position: relative; z-index: 10;
-    backdrop-filter: blur(8px); border-bottom: 1px solid transparent;
+    backdrop-filter: blur(8px); border-bottom: 1px solid transparent; width: 100%;
 }
 .mobile-menu-btn { display: none; margin-right: 12px; }
 
@@ -193,7 +196,6 @@ body { background-color: var(--bg-main); color: var(--text-primary); overflow: h
     background: linear-gradient(180deg, transparent, var(--bg-main) 10%);
     display: flex; flex-direction: column; align-items: center;
     position: relative; z-index: 10;
-    /* Extra padding for mobile bottom bar */
     padding-bottom: max(24px, env(safe-area-inset-bottom));
 }
 
@@ -228,15 +230,17 @@ body { background-color: var(--bg-main); color: var(--text-primary); overflow: h
 @media (max-width: 768px) {
     .nav-links { display: none; }
     .landing-hero h1 { font-size: 36px; }
-    /* Mobile Menu fix */
-    .mobile-menu-btn { display: block; z-index: 100; position: relative; }
     
-    .sidebar { position: absolute; z-index: 90; height: 100dvh; transform: translateX(-100%); }
-    .sidebar.open { transform: translateX(0); box-shadow: 5px 0 25px rgba(0,0,0,0.5); }
+    /* Ensure the hamburger button is perfectly clickable */
+    .mobile-menu-btn { display: block; z-index: 1000; position: relative; flex-shrink: 0; margin-right: 8px; }
     
-    .nav-controls { gap: 8px; }
-    .advanced-select { padding: 6px 8px; font-size: 12px; }
-    .status-indicator { display: none; /* Hide status dot on mobile to save space */ }
+    .sidebar { position: absolute; z-index: 1001; height: 100dvh; transform: translateX(-100%); }
+    .sidebar.open { transform: translateX(0); box-shadow: 10px 0 50px rgba(0,0,0,0.8); }
+    
+    /* Prevent nav-controls from overlapping the button */
+    .nav-controls { flex: 1; justify-content: flex-end; overflow: hidden; display: flex; gap: 6px; }
+    .advanced-select { padding: 6px; font-size: 12px; max-width: 100px; text-overflow: ellipsis; white-space: nowrap; overflow: hidden; }
+    .status-indicator { display: none; }
     
     .input-container { padding: 12px 12px max(16px, env(safe-area-inset-bottom)) 12px; }
 }
