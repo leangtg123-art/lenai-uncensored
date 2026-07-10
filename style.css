@@ -47,8 +47,8 @@ body { background-color: var(--bg-main); color: var(--text-primary); overflow: h
 @keyframes spin { to { transform: rotate(360deg); } }
 
 /* VIEWS */
-.view-active { display: block; opacity: 1; transition: opacity 0.5s ease; height: 100dvh; width: 100vw;}
-.view-hidden { display: none; opacity: 0; }
+.view-active { opacity: 1; transition: opacity 0.5s ease; height: 100dvh; width: 100vw;}
+.view-hidden { display: none !important; opacity: 0; }
 
 /* ================== LANDING PAGE ================== */
 #landing-page { position: relative; overflow-y: auto; }
