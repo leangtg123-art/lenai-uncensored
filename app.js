@@ -181,7 +181,7 @@ CRITICAL: You must communicate entirely in this language: ${selectedLang}. Do no
                     headers: { "Content-Type": "application/json" },
                     body: JSON.stringify({
                         messages: [{ role: "system", content: SYSTEM_PROMPT }, ...conversationHistory],
-                        model: selectedModel,
+                        model: "openai", // Force openai as it's the only free anonymous model
                         seed: Math.floor(Math.random() * 1000000)
                     }),
                     signal: abortController.signal
