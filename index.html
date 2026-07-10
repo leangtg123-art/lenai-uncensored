@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Lenai Uncensored - Advanced AI Studio</title>
     <meta name="description" content="Lenai Uncensored - Professional AI Studio">
-    <link rel="stylesheet" href="style.css?v=2">
+    <link rel="stylesheet" href="style.css?v=3">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js" defer></script>
     <script src="app.js" defer></script>
@@ -13,93 +13,93 @@
 <body>
 
     <!-- ==============================================
-         LANDING PAGE (View 1)
+         LANDING PAGE
          ============================================== -->
-    <div id="landing-page" class="view-active">
+    <div id="landing-page" class="view-active fade-in">
         <div class="landing-bg"></div>
-        <nav class="landing-nav">
+        <nav class="landing-nav slide-down">
             <div class="logo">Lenai<span>Uncensored</span></div>
             <div class="nav-links">
-                <a href="#">Features</a>
-                <a href="#">Models</a>
-                <a href="#">API</a>
+                <a href="#">Fitur</a>
+                <a href="#">Model AI</a>
+                <a href="#">API Akses</a>
             </div>
-            <button id="enter-app-btn" class="btn-primary">Launch Studio</button>
+            <button id="enter-app-btn" class="btn-primary hover-glow">Mulai Eksekusi</button>
         </nav>
         
-        <main class="landing-hero">
-            <h1>Intelligence Without <span class="highlight">Boundaries</span>.</h1>
-            <p>Access the most advanced LLaMA & Mistral models without ethical filters, content restrictions, or corporate guardrails. Built for developers.</p>
+        <main class="landing-hero slide-up">
+            <h1>Kecerdasan Tanpa <span class="highlight">Batas</span>.</h1>
+            <p>Akses model LLaMA & Mistral tercanggih tanpa filter etika, batasan konten, atau sensor korporat. Dibangun khusus untuk developer.</p>
             
-            <div class="feature-grid">
+            <div class="feature-grid stagger-in">
                 <div class="feat-card">
-                    <h3>1. Unrestricted Inference</h3>
-                    <p>Zero content filters. Raw data processing.</p>
+                    <h3>1. Eksekusi Bebas Sensor</h3>
+                    <p>Nol filter konten. Memproses data mentah 100%.</p>
                 </div>
                 <div class="feat-card">
-                    <h3>2. Multi-Model Support</h3>
-                    <p>Switch between LLaMA, Mistral, and GPT architectures live.</p>
+                    <h3>2. Multi-Model Dinamis</h3>
+                    <p>Beralih antara arsitektur LLaMA, Mistral, dan GPT secara real-time.</p>
                 </div>
                 <div class="feat-card">
-                    <h3>3. Asynchronous Execution</h3>
-                    <p>Task blocking, stream abortion, and high-concurrency loops.</p>
+                    <h3>3. Asynchronous Workflow</h3>
+                    <p>Task blocking, stream abortion, dan animasi proses logis.</p>
                 </div>
                 <div class="feat-card">
-                    <h3>4. Credit/API Management</h3>
-                    <p>Track token usage and swap provider keys dynamically.</p>
+                    <h3>4. Manajemen Kredit & API</h3>
+                    <p>Lacak penggunaan token dan ganti kunci provider secara dinamis.</p>
                 </div>
             </div>
         </main>
     </div>
 
     <!-- ==============================================
-         MAIN CHAT STUDIO (View 2)
+         MAIN CHAT STUDIO
          ============================================== -->
     <div id="chat-app" class="app-container view-hidden">
         
         <!-- Sidebar -->
         <aside class="sidebar" id="sidebar">
-            <div class="sidebar-header">
-                <button class="new-chat-btn" id="new-chat-btn">
+            <div class="sidebar-header slide-right">
+                <button class="new-chat-btn hover-pulse" id="new-chat-btn">
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
-                    New Chat
+                    Chat Baru
                 </button>
                 <button class="toggle-sidebar" id="close-sidebar-btn">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5"></path><path d="M12 19l-7-7 7-7"></path></svg>
                 </button>
             </div>
             
-            <div class="chat-history">
-                <div class="history-label">Workspace</div>
+            <div class="chat-history fade-in-delay">
+                <div class="history-label">Ruang Kerja</div>
                 <div class="tool-list">
-                    <div class="tool-item active"><span class="icon">💬</span> Chat Interface</div>
-                    <div class="tool-item"><span class="icon">📚</span> Prompt Library</div>
-                    <div class="tool-item"><span class="icon">💻</span> Code Interpreter</div>
-                    <div class="tool-item"><span class="icon">🖼️</span> Image Generation</div>
-                    <div class="tool-item"><span class="icon">🌐</span> Web Search Toggle</div>
-                    <div class="tool-item"><span class="icon">⚙️</span> System Prompts</div>
-                    <div class="tool-item"><span class="icon">⬇️</span> Export JSON/PDF</div>
+                    <div class="tool-item active"><span class="icon">💬</span> Antarmuka Chat</div>
+                    <div class="tool-item"><span class="icon">📚</span> Perpustakaan Prompt</div>
+                    <div class="tool-item"><span class="icon">💻</span> Penerjemah Kode (Mock)</div>
+                    <div class="tool-item"><span class="icon">🖼️</span> Generator Gambar</div>
+                    <div class="tool-item"><span class="icon">🌐</span> Toggle Pencarian Web</div>
+                    <div class="tool-item"><span class="icon">⚙️</span> Sistem Prompt (Root)</div>
+                    <div class="tool-item"><span class="icon">⬇️</span> Ekspor JSON/PDF</div>
                 </div>
 
-                <div class="history-label" style="margin-top: 24px;">Recent Chats</div>
+                <div class="history-label" style="margin-top: 24px;">Riwayat Eksekusi</div>
                 <div class="history-list" id="history-list">
                     <div class="history-item">Root execution setup</div>
                 </div>
             </div>
 
-            <div class="sidebar-footer">
+            <div class="sidebar-footer slide-up">
                 <div class="credit-box">
                     <div style="display:flex; justify-content:space-between; margin-bottom:4px">
-                        <span style="font-size:12px; color:var(--text-secondary)">API Credits</span>
-                        <span style="font-size:12px; color:var(--accent-color)" id="credit-count">Unlimited</span>
+                        <span style="font-size:12px; color:var(--text-secondary)">Kredit API</span>
+                        <span style="font-size:12px; color:var(--accent-color)" id="credit-count">Tak Terbatas</span>
                     </div>
-                    <div class="progress-bar"><div class="progress-fill" style="width:100%"></div></div>
+                    <div class="progress-bar"><div class="progress-fill pulse-bg" style="width:100%"></div></div>
                 </div>
-                <div class="user-profile">
+                <div class="user-profile hover-glow">
                     <div class="avatar-sm">R</div>
                     <div class="user-info">
                         <span class="user-name">Root User</span>
-                        <span class="user-plan">Settings & API Keys</span>
+                        <span class="user-plan">Pengaturan & Kunci API</span>
                     </div>
                 </div>
             </div>
@@ -107,19 +107,29 @@
 
         <!-- Main Chat Area -->
         <main class="main-content">
-            <header class="top-nav">
+            <header class="top-nav slide-down">
                 <button class="toggle-sidebar mobile-menu-btn" id="open-sidebar-btn">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
                 </button>
                 
-                <div style="display:flex; gap:12px; align-items:center">
-                    <select id="model-selector" class="advanced-select">
+                <div class="nav-controls stagger-in" style="display:flex; gap:12px; align-items:center">
+                    
+                    <!-- Language Selector -->
+                    <select id="lang-selector" class="advanced-select hover-glow">
+                        <option value="id">🇮🇩 Bahasa Indonesia</option>
+                        <option value="en">🇬🇧 English</option>
+                        <option value="ja">🇯🇵 日本語 (Japanese)</option>
+                    </select>
+
+                    <!-- Model Selector -->
+                    <select id="model-selector" class="advanced-select hover-glow">
                         <option value="llama">LLaMA 3 (Uncensored)</option>
                         <option value="mistral">Mistral 8x7B (Uncensored)</option>
                         <option value="openai">GPT-Core (Uncensored)</option>
                     </select>
+                    
                     <div class="status-indicator">
-                        <div class="status-dot"></div>
+                        <div class="status-dot blink-slow"></div>
                         <span id="api-status">API Online</span>
                     </div>
                 </div>
@@ -127,32 +137,35 @@
 
             <div class="chat-container" id="chat-container">
                 <!-- Initial Welcome Screen -->
-                <div class="welcome-screen" id="welcome-screen">
-                    <div class="welcome-logo">
-                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2a10 10 0 1 0 10 10H12V2z"></path><path d="M12 12 2.1 7.1"></path><path d="M12 12l9.9 4.9"></path></svg>
+                <div class="welcome-screen fade-in" id="welcome-screen">
+                    <div class="welcome-logo float-anim">
+                        <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2a10 10 0 1 0 10 10H12V2z"></path><path d="M12 12 2.1 7.1"></path><path d="M12 12l9.9 4.9"></path></svg>
                     </div>
-                    <h1>Lenai Studio</h1>
-                    <p>System filters disabled. Ready for execution.</p>
+                    <h1 class="slide-up">Lenai Studio</h1>
+                    <p class="slide-up delay-1">Filter sistem dimatikan. Siap untuk eksekusi tanpa batas.</p>
                 </div>
             </div>
 
-            <div class="input-container">
+            <div class="input-container slide-up">
                 <div class="task-blocker" id="task-blocker">
-                    <span>Task in progress. Other actions locked.</span>
-                    <button id="stop-generation-btn" class="btn-danger">Stop Execution</button>
+                    <div style="display:flex; align-items:center; gap:8px">
+                        <div class="spinner-small"></div>
+                        <span>Task in progress. UI Locked.</span>
+                    </div>
+                    <button id="stop-generation-btn" class="btn-danger hover-glow">Hentikan Eksekusi</button>
                 </div>
 
-                <div class="input-box" id="input-box-wrapper">
-                    <button class="attach-btn" title="Upload File (Mock)">
+                <div class="input-box hover-glow-border" id="input-box-wrapper">
+                    <button class="attach-btn" title="Unggah File (Mock)">
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21.44 11.05l-9.19 9.19a6 6 0 0 1-8.49-8.49l9.19-9.19a4 4 0 0 1 5.66 5.66l-9.2 9.19a2 2 0 0 1-2.83-2.83l8.49-8.48"></path></svg>
                     </button>
-                    <textarea id="chat-input" placeholder="Message Lenai... (Shift+Enter for newline)" rows="1"></textarea>
-                    <button class="send-btn" id="send-btn" disabled>
+                    <textarea id="chat-input" placeholder="Perintah Lenai... (Shift+Enter untuk baris baru)" rows="1"></textarea>
+                    <button class="send-btn hover-pulse" id="send-btn" disabled>
                         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
                     </button>
                 </div>
-                <div class="footer-text">
-                    Advanced mode. Verify generated code and outputs. Uncensored models may hallucinate.
+                <div class="footer-text fade-in-delay">
+                    Mode Lanjutan. Harap verifikasi kode dan hasil. Model tanpa sensor mungkin berhalusinasi.
                 </div>
             </div>
         </main>
